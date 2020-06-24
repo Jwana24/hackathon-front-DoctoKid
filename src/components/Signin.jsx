@@ -1,10 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form } from 'react-bootstrap';
 import doctokid from '../img/doctokid-logo.png';
 import '../App.css';
 
 const Signin = () => {
+
+  const [inputs, setInputs] = useState({
+    email: '',
+    password: ''
+  });
+
+  const onChange = (e) => {
+    setInputs({
+      ...inputs,
+      [e.target.name]: e.target.value,
+    });
+  };
+  
   return (
     <section className="signin-body container">
       <div className="signin-logo">
@@ -15,12 +28,13 @@ const Signin = () => {
         <p className="psignin text-center">
         Connectez-vous avec vos identifiants.
         </p>
-        <Form.Group controlId="email">
-          <Form.Control type="email" placeholder="Entrez votre Email *" />
+        <Form.Group onChange={onChange}>
+          <Form.Control type="email" name="email" placeholder="Entrez votre Email *" />
         </Form.Group>
-        <Form.Group controlId="password">
+        <Form.Group onChange={onChange}>
           <Form.Control
             type="password"
+            name="password"
             placeholder="Entrez votre mot de passe *"
           />
         </Form.Group>
