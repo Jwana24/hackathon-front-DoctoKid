@@ -53,7 +53,7 @@ const Signin = () => {
           />
         </Form.Group>
         <div className="text-center">
-          <Link to="/signin">
+          <Link to="/avatars">
             <button
               className="button-signup"
             >C'est Parti !</button>

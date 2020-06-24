@@ -26,6 +26,10 @@ h1, h2, h3, button {
   font-weight: 800 !important;
 }
 
+h2 {
+  font-size: 3rem !important;
+}
+
 input {
   color: #222;
 }
@@ -34,7 +38,7 @@ input {
 
 .signin-body {
   background: #fff;
-  width: 600px;
+  width: 600px !important;
   margin: auto;
   padding: 30px;
   position: absolute;
@@ -74,4 +78,93 @@ input {
 
 .button-signup:hover {
   background-color: #45b3df;
+}
+
+.button-avatar {
+  text-align: center;
+  color: #000;
+  padding: 15px 25px;
+  border: none;
+  height: 60px;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.button-avatar:hover {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+/* CARDS */
+
+.avatars-body {
+  background: #fff;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-group {
+  display: flex;
+}
+
+.card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #fff;
+  border-radius: 30px;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.card-body:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1 {
+  background: #ffc85b;
+}
+
+.card2 {
+  background: #EA9BB7;
+}
+
+.card3 {
+  background: #57B3DF;
+}
+
+.card4 {
+  background: #ffc85b;
+}
+
+.card-body img {
+  width: 80%;
+}
+
+.card-footer {
+  border: none;
+}
+
+.card {
+  border: none !important;
+  margin: 5px;
+  border-radius: 30px;
 }
