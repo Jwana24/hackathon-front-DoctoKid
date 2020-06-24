@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signin from './components/Signin';
 import Avatars from './components/Avatars';
+import Informations from './components/Informations';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
         <Route exact path="/" component={Signin} />
         <Route path="/avatars" component={Avatars} />
         <Route path="/quiz" component={Quiz} />
+        <Route path="/informations" component={Informations} />
       </Switch>
     </>
   );
