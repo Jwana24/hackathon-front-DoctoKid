@@ -10,8 +10,6 @@ function App() {
     <>
       <Switch>
         <Route exact path="/" component={Signin} />
-      </Switch>
-      <Switch>
         <Route path="/avatars" component={Avatars} />
         <Route path="/quiz" component={Quiz} />
       </Switch>
