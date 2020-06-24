@@ -10,11 +10,13 @@ import { Button, Modal } from 'react-bootstrap';
 const Avatars = () => {
 
   const [show, setShow] = useState(false);
+  const [avatar, setAvatar] = useState(null);
 
   const handleClose = () => {
     setShow(false);
   };
 
+  console.log(avatar);
   return (
     <>
       <Modal size="md" show={show} onHide={() => handleClose()} centered>
@@ -38,7 +40,7 @@ const Avatars = () => {
               <img src={Dino1} alt="Dino1"/>
             </div>
             <div className="text-center">
-            <button className="button-avatar" onClick={() => setShow(true)}>
+            <button className="button-avatar" onClick={() => {setShow(true);setAvatar(1)}}>
               A moi !
             </button>
             </div>
@@ -48,7 +50,7 @@ const Avatars = () => {
               <img src={Dino2} alt="Dino2"/>
             </div>
             <div className="text-center">
-            <button className="button-avatar" onClick={() => setShow(true)}>
+            <button className="button-avatar" onClick={() => {setShow(true);setAvatar(2)}}>
               A moi !
             </button>
             </div>
@@ -58,7 +60,7 @@ const Avatars = () => {
               <img src={Dino3} alt="Dino3"/>
             </div>
             <div className="text-center">
-            <button className="button-avatar" onClick={() => setShow(true)}>
+            <button className="button-avatar" onClick={() => {setShow(true);setAvatar(3)}}>
               A moi !
             </button>
             </div>
@@ -68,7 +70,7 @@ const Avatars = () => {
               <img src={Dino4} alt="Dino4"/>
             </div>
             <div className="text-center">
-            <button className="button-avatar" onClick={() => setShow(true)}>
+            <button className="button-avatar" onClick={() => {setShow(true);setAvatar(4)}}>
               A moi !
             </button>
             </div>
