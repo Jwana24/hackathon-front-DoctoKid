@@ -70,14 +70,17 @@ input {
   height: 60px;
   border-radius: 30px;
   background-color: #ffc85b;
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
 }
 
 .button-signup:hover {
   background-color: #45b3df;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
 }
 
 .button-avatar {
@@ -167,4 +170,30 @@ input {
   border: none !important;
   margin: 5px;
   border-radius: 30px;
+}
+
+/* MODALS */
+
+.btn-outline-danger {
+  color: #57B3DF !important;
+  border-color: #57B3DF !important;
+}
+
+.btn-outline-danger:hover {
+  color: #fff !important;
+  background-color: #57B3DF !important;
+  transform: scale(1.2) !important;
+}
+
+.btn-outline-secondary:hover {
+  color: #6c757d !important;
+  background-color: #E5E5E5 !important;
+}
+
+.modal-body {
+  text-align: center;
+}
+
+.modal-footer {
+  justify-content: center !important;
 }
