@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Signin from './components/Signin';
 import Avatars from './components/Avatars';
 import Quizz from './components/Quizz/Quizz';
+
 import Informations from './components/Informations';
 
 function App() {
