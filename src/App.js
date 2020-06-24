@@ -4,6 +4,7 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Signin from './components/Signin';
 import Avatars from './components/Avatars';
+import Quiz from './components/Quiz';
 
 function App() {
   return (
