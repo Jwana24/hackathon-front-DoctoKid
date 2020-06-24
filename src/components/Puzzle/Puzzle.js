@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
 
-import { Game } from "../../common/style";
+import { Game } from "../../common/styles";
 import { GameContainer, WinContainer } from "./styles";
 
 import DraggableList from "./components/DraggableList";

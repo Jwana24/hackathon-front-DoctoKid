@@ -1,6 +1,6 @@
 import React, { createContext, useState, useContext, useEffect } from "react";
 import styled from "styled-components";
-import { Loader } from "../../common/style";
+import { Loader } from "../../common/styles";
 
 const Background = styled.div`
   height: 100vh;

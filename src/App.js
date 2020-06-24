@@ -26,34 +26,32 @@ const  App = props => {
     leave: { opacity: 0, transform: "translateX(-20%)", delay: 0 }
   });
   return transitions.map(({ item, props, key }) => (
-    <>
-      <animated.div key={key} style={props}>
-        <Suspense fallback={""}>
-          <Switch location={item}>
-            <Route exact path="/" component={Signup} />
-            <Route exact path="/signin" component={Signin} />
-            <Route path="/avatars" component={Avatars} />
-            <Route path="/quizz" component={Quizz} />
-            <Route
-              path="/puzzle"
-              exact
-              render={props => (
-                <ImagesProvider
-                  r={require.context(
-                    "./components/Puzzle/images",
-                    false,
-                    /\.(png|jpe?g|svg)$/
-                  )}
-                >
-                  <Puzzle {...props} />
-                </ImagesProvider>
-              )}
-            />
-            <Route path="/informations" component={Informations} />
-          </Switch>
-        </Suspense>
-      </animated.div>
-    </>
+    <animated.div key={key} style={props}>
+      <Suspense fallback={""}>
+        <Switch location={item}>
+          <Route exact path="/" component={Signup} />
+          <Route exact path="/signin" component={Signin} />
+          <Route path="/avatars" component={Avatars} />
+          <Route path="/quizz" component={Quizz} />
+          <Route
+            path="/puzzle"
+            exact
+            render={props => (
+              <ImagesProvider
+                r={require.context(
+                  "./components/Puzzle/images",
+                  false,
+                  /\.(png|jpe?g|svg)$/
+                )}
+              >
+                <Puzzle {...props} />
+              </ImagesProvider>
+            )}
+          />
+          <Route path="/informations" component={Informations} />
+        </Switch>
+      </Suspense>
+    </animated.div>
   ));
 }
 
