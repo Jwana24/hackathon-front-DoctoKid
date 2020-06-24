@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Form, Row, Col } from 'react-bootstrap';
+import { Form } from 'react-bootstrap';
 import doctokid from '../img/doctokid-logo.png';
 import '../App.css';
 
@@ -11,22 +11,10 @@ const Signin = () => {
         <img src={doctokid} alt="DoctoKid" />
       </div>
       <Form className="Form-container">
-        <h2 className="mb-4 text-center">Mon profil</h2>
+        <h2 className="mb-4 text-center">Je me connecte</h2>
         <p className="psignin text-center">
-        Inscrivez-vous en quelques clics pour pouvoir vous amuser avec nous !
+        Connectez-vous avec vos identifiants.
         </p>
-        <Row>
-            <Col>
-            <Form.Group controlId="firstname">
-              <Form.Control type="text" placeholder="Entrez votre Prénom *" />
-            </Form.Group>
-            </Col>
-            <Col>
-              <Form.Group controlId="lastname">
-                <Form.Control type="text" placeholder="Entrez votre Nom *" />
-              </Form.Group>
-            </Col>
-          </Row>
         <Form.Group controlId="email">
           <Form.Control type="email" placeholder="Entrez votre Email *" />
         </Form.Group>
@@ -40,14 +28,14 @@ const Signin = () => {
           <Link to="/signin">
             <button
               className="button-signup"
-            >C'est Parti !</button>
+            >Je me connecte</button>
           </Link>
         </div>
       </Form>
       <p className="text-center mt-4 psignin">
-      Vous avez déjà un compte ?{' '}
-        <Link to="/signin">
-        Connectez-vous
+        Vous n'avez pas de compte ?{' '}
+        <Link to="/">
+          Inscrivez-vous
         </Link>
       </p>
     </section>
