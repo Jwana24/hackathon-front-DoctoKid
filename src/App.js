@@ -13,6 +13,7 @@ function App() {
       </Switch>
       <Switch>
         <Route path="/avatars" component={Avatars} />
+        <Route path="/quiz" component={Quiz} />
       </Switch>
     </>
   );
