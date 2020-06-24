@@ -5,7 +5,7 @@ const data = {
         choice2: "a des boutons rouges",
         choice3: "a la tête qui gratte",
         choice4: "a mal au ventre",
-        image: "https://cdn.mycrazystuff.com/14858-home_default/t-rex-costume-gonflable-dinosaure.jpg",
+        image: "https://is5-ssl.mzstatic.com/image/thumb/Purple122/v4/1c/de/7e/1cde7eba-a6eb-c38b-3919-fc7b8eec723c/pr_source.png/320x0w.png",
     },
 
     'carries' : {
