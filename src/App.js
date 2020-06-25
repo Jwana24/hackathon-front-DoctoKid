@@ -11,7 +11,7 @@ import Informations from './components/Informations';
 import { ImagesProvider } from "./components/contexts/ImageContext";
 import { useTransition, animated } from "react-spring";
 import useRouter from "./hooks/useRouter";
-import  Navbar from './components/Navbar/Navbar';
+import  NavbarComponent from './components/Navbar/NavbarComponent';
 
 
 const Puzzle = React.lazy(() => {
@@ -32,11 +32,7 @@ const  App = props => {
     <>
     <animated.div key={key} style={props}>
       <Suspense fallback={""}>
-<<<<<<< HEAD
-        <Navbar />
-=======
-      <NavbarComponent />
->>>>>>> ac4b8b5d81f4a8bf2a5ec158def990d1607370a8
+        <NavbarComponent />
         <Switch location={item}>
           <Route exact path="/" component={Signup} />
           <Route exact path="/signin" component={Signin} />
