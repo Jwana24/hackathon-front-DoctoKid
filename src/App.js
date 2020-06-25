@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import Signin from './components/Signin';
 import Avatars from './components/Avatars';
 import Quizz from './components/Quizz/Quizz';
+import Footer from './components/Footer';
 import Informations from './components/Informations';
 import { ImagesProvider } from "./components/contexts/ImageContext";
 import { useTransition, animated } from "react-spring";
@@ -26,6 +27,7 @@ const  App = props => {
     leave: { opacity: 0, transform: "translateX(-20%)", delay: 0 }
   });
   return transitions.map(({ item, props, key }) => (
+    <>
     <animated.div key={key} style={props}>
       <Suspense fallback={""}>
         <Switch location={item}>
@@ -49,9 +51,12 @@ const  App = props => {
             )}
           />
           <Route path="/informations" component={Informations} />
+          
         </Switch>
       </Suspense>
     </animated.div>
+    <Footer />
+    </>
   ));
 }
 

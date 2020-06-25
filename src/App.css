@@ -41,10 +41,8 @@ input {
   width: 600px !important;
   margin: auto;
   padding: 30px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: 50px 0px;
 }
 
 .signin-logo {
@@ -202,4 +200,56 @@ input {
   .card-body img {
     width: 40%;
   }
+}
+
+/* FOOTER */
+
+footer p {
+  margin: 0px;
+}
+
+.page-footer {
+  background-color: #EFB7CC;
+  color: #fff;
+  position:relative;
+  bottom:0;
+  width:100%;
+  padding-top:50px;
+}
+
+.page-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-footer img {
+  width: 150px;
+}
+
+#img-footer-xs {
+  display: none;
+}
+
+.love {
+  width: 15px !important;
+  padding-bottom: 5px;
+}
+
+.social {
+  width: 30px !important;
+  margin: 0px 15px;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}
+
+.list-unstyled a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 0px !important;
 }
