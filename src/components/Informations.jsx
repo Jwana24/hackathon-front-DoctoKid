@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { Link } from "react-router-dom";
 
 import "./Informations.css";
 
@@ -86,6 +87,7 @@ const Informations = (props) => {
                                 name="email"
                                 value={mail.email}
                                 onChange={handleChange}
+                                placeholder="example@example.fr"
                             />
                             <input
                                 className="FormSubmitElement"
@@ -94,6 +96,15 @@ const Informations = (props) => {
                                 type="submit"
                             />
                         </form>
+                    </div>
+                    <div>
+                        <div>
+                            <Link to="/puzzle">
+                                <h3 className="InfoPuzzle">
+                                    Maintenant il est temps de s'amuser !
+                                </h3>
+                            </Link>
+                        </div>
                     </div>
                 </div>
             </div>
