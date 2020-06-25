@@ -5,20 +5,28 @@ import Axios from 'axios';
 
 
 
-const Quizz = () => {
+const Quizz = (props) => {
 
     const [answers, setAnswers] = useState('question');
     const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
+    const [avatarImage, setAvatarImage] = useState();
 
-    const [dino, setDino]= useState({});
+    // const [dino, setDino]= useState({});
 
-    useEffect(()=> {
-        Axios
-        .get('/api/dinosaurs/:id')
-        .then((response)=> response.data)
-        .then((data)=> setDino(data))
+    // useEffect(()=> {
+    //     const avatar_id = props.match.params.id
+    //     console.log(props.match.params.id)
+    //     Axios.get(`http://localhost:8080/api/dinosaurs/${avatar_id}`)
+    //     .then(res=> setAvatarImage(res.data.image))
+    // }, [])
+
+    // useEffect(()=> {
+    //     Axios
+    //     .get('/api/dinosaurs/:id')
+    //     .then((response)=> response.data)
+    //     .then((data)=> setDino(data))
     
-    })
+    // })
 
    const restart  = () => {
        setQuestionOrExplanation('question')
@@ -78,6 +86,7 @@ const Quizz = () => {
             <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>
                 <div className='PortraitContainer'>
                     <div className='Portrait'>
+                        <img src={require(`../../img/dino${props.match.params.id}.png`)} alt = '' />
                     </div>
                 </div>
                     <div className='Question'>
