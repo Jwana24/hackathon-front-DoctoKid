@@ -2,13 +2,14 @@ import React from 'react';
 import { Navbar, Button, Nav,  } from 'react-bootstrap';
 import './Navbar.css';
 
+
 const NavbarComponent = () => {
     return (
         
         <div>
             <Navbar bg="light" expand="lg" className="Navbar">
                 <div>
-                <Navbar.Brand href="#home">Dinhospital</Navbar.Brand>
+                <Navbar.Brand href="#home"></Navbar.Brand>
                 </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
@@ -24,4 +25,4 @@ const NavbarComponent = () => {
 }
 
 
-export default NavbarComponent  
+export default NavbarComponent;
