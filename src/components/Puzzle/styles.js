@@ -39,7 +39,7 @@ export const GameContainer = styled.div`
       height: 100%;
       border: 2px solid #ffffff;
       padding: 0px;
-      background: lightblue;
+      background: #ffc85b;
       cursor: pointer;
       transform: scale(1);
       transition: 0.1s transform;
@@ -139,7 +139,7 @@ export const Content = styled.div`
     border-radius: 5px;
     color: white;
     font-size: 1.6rem;
-    background: lightblue;
+    background: #57B3DF;
     border: 2px #fff solid;
     background-image: url(${({ img }) => img});
     background-size: 100%;
