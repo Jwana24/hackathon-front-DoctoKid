@@ -8,7 +8,7 @@ const NavbarComponent = () => {
             <Navbar bg="light" expand="lg" className="Navbar">
                 <div className="container">
                 <div>
-                <Navbar.Brand href="#home" className="brand-font">Dinhospital</Navbar.Brand>
+                <Navbar.Brand href="#home" className="brand-font">DoctoDino</Navbar.Brand>
                 </div>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">

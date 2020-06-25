@@ -13,10 +13,10 @@ const Footer = () => {
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <div>
-                        <img id="img-footer-xs" src={doctodino} alt="Logo Geeokoss" />
+                        <img id="img-footer-xs" src={doctodino} alt="Logo DoctoDino" />
                     </div>
-                    <div className="row mb-2">
-                        <img id="img-footer-lg" src={doctodino} alt="Logo Geeokoss" />
+                    <div className="row mb-2 brand-footer-sm">
+                        <img id="img-footer-lg" src={doctodino} alt="Logo DoctoDino" />
                         <div className="brand-font brand-footer">DoctoDino</div>
                     </div>
                     <div>
@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
         </div>
         <hr />
-        <div class="footer-copyright text-center">
+        <div class="footer-copyright text-center pb-2">
             <p>© 2020 | Made with <img src={love} class="love" alt="love" /> by The Wild Anatomy</p>
         </div>
     </footer>
