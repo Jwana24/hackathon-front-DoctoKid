@@ -1,3 +1,119 @@
 .Info{
+  display: flex;
+  flex-direction: column;
   text-align: center;
+  border-radius: 1em;
+  background-color: #fdfaf5;
+  margin: 40px 50px 40px 50px;
+}
+
+.Info .ContainerInfoTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-bottom: 0px;
+}
+
+.Info .InfoTitle{
+  color: #13265a;
+  font-weight: 900;
+  background-color:#ffc85c;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 0px;
+  border-radius: 10px 10px 0em 0em;
+  -webkit-border-radius: 10px 10px 0em 0em;
+  -moz-border-radius: 10px 10px 0em 0em;
+  -ms-border-radius: 10px 10px 0em 0em;
+  -o-border-radius: 10px 10px 0em 0em;
+}
+
+/* .Info .InfoUnorderedList{
+
+} */
+
+.Info .InfoBody{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 50px;
+  border: 2px dashed #7b7e89;
+  border-radius: 0px 0px 10px 10px;
+  border-top: none;
+}
+
+.Info .ContainerDesease{
+  display: flex;
+  align-items: center;
+}
+
+.Info .InfoNameDesease, .InfoMail{
+  font-weight: 700;
+  color: #13265a;
+}
+
+.Info .InfoMail{
+  margin-top: 50px;
+}
+
+/* .Info .InfoMedia{
+  padding: 150px 0px;
+} */
+
+.Info .InfoMediaBody{
+  width: 600px;
+  height: 300px;
+  border: none;
+  box-shadow: none;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
+}
+.Info .ContainerText{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 20px;
+}
+
+.Info .ContainerContentText{
+  width: 75%;
+}
+
+.Info .ContainerTextElement{
+  color:#7b7e89;
+  text-align: initial;
+  font-size: 1rem;
+}
+
+.Info .ContainerForm{
+  margin-top: 20px;
+}
+
+.Info .FormEmailElement{
+  padding: 5px 15px ;
+  margin-right: 20px;
+  border: 1px solid #b2bec3;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.Info .FormSubmitElement{
+  padding: 5px 15px;
+  background-color: aqua;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
