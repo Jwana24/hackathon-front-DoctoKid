@@ -11,23 +11,6 @@ const Quizz = (props) => {
     const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
     const [avatarImage, setAvatarImage] = useState();
 
-    // const [dino, setDino]= useState({});
-
-    // useEffect(()=> {
-    //     const avatar_id = props.match.params.id
-    //     console.log(props.match.params.id)
-    //     Axios.get(`http://localhost:8080/api/dinosaurs/${avatar_id}`)
-    //     .then(res=> setAvatarImage(res.data.image))
-    // }, [])
-
-    // useEffect(()=> {
-    //     Axios
-    //     .get('/api/dinosaurs/:id')
-    //     .then((response)=> response.data)
-    //     .then((data)=> setDino(data))
-    
-    // })
-
    const restart  = () => {
        setQuestionOrExplanation('question')
        setAnswers('question')
@@ -116,9 +99,10 @@ const Quizz = (props) => {
                 <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>
                     <div className='PortraitContainer'>
                         <div className='Portrait'>
+                            <img src={require(`../../img/dino${props.match.params.id}.png`)} alt = '' />
                         </div>
                     </div>
-                    <div className='Explanation' style={{height: data[answers].height}}>
+                    <div className='Explanation'>
                         <p>{data[answers].explanation1}</p>
                         <p>{data[answers].explanation2}</p>
                         <p>{data[answers].explanation3}</p>

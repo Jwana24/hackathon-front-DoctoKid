@@ -40,7 +40,7 @@ const data = {
         choice2: 'a des lentes sur les cheveux',
         choice3: 'de petites piqures sur la tête',
         choice4: 'a des croutes sur la tête',
-        image: 'https://lh3.googleusercontent.com/proxy/gkd0H0Klx7z4GsjDINKmwJ7KycWvhTCi9NT-Or1eS0t5cAOQ2ccdAPhUVPHQY_XgaDpHdtsvZcZCoxz-hWek_2RJWpxS2dmocP4QyzkHeFqPtAD3a964mH4kcrZzYZv9qxMiikasEHCr_MCDH28Z',
+        image: 'https://thumbs.dreamstime.com/b/fille-avec-des-poux-de-t%C3%AAte-121957346.jpg',
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",

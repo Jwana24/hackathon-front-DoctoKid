@@ -1,0 +1,8 @@
+.Navbar-Container{
+
+    display:flex;
+    flex-direction: row;
+}
+.Navbar{
+    background-color: #FEC85B !important;
+}
