@@ -7,13 +7,13 @@ const Informations = (props) => {
   const [ deseases, setDeseases ] = useState([]);
   const [ mail, setMail ] = useState({});
 
-  const deseaseName = props.match.params.name
+  const deseaseName = props.match.params.name;
 
   // get deseases by name in the database
   useEffect(() => {
     Axios({
       method: 'GET',
-      url: `http://localhost:8080/api/deseases?name=${deseaseName}`,
+      url: `http://localhost:3000/api/deseases?name=${deseaseName}`,
       data: deseases
     })
     .then(res => res.data)
@@ -30,9 +30,6 @@ const Informations = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const TEST = ()=> {
-    //   return deseases.map( item => <> <h1>{item.name}</h1> <article>{item.text}</article> <a href={item.video}>youtube</a></>)
-    // }
     Axios({
       method: 'POST',
       url: 'http://localhost:3000/api/send',
