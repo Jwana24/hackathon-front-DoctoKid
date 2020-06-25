@@ -6,6 +6,7 @@ import Dino3 from '../img/dino3.png';
 import Dino4 from '../img/dino4.png';
 import '../App.css';
 import { Button, Modal } from 'react-bootstrap';
+import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 
 const Avatars = () => {
 
