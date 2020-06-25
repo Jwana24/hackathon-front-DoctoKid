@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Dino1 from '../img/dino1.png';
 import Dino2 from '../img/dino2.png';
 import Dino3 from '../img/dino3.png';
@@ -16,6 +16,10 @@ const Avatars = () => {
     setShow(false);
   };
 
+  const chooseAvatar = () => {
+    localStorage.setItem('avatar_id', avatar)
+  }
+
   return (
     <>
       <Modal size="md" show={show} onHide={() => handleClose()} centered>
@@ -26,9 +30,11 @@ const Avatars = () => {
           <Button variant="outline-secondary" onClick={() => handleClose()}>
             Non
           </Button>
-          <Button variant="outline-danger">
-            Oui !
-          </Button>
+          <Link to={`/quizz/${avatar}`}>
+            <Button onClick={chooseAvatar} variant="outline-danger">
+              Oui !
+            </Button>
+          </Link>
         </Modal.Footer>
       </Modal>
       <section className="avatars-body container">

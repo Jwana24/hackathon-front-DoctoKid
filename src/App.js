@@ -32,7 +32,7 @@ const  App = props => {
           <Route exact path="/" component={Signup} />
           <Route exact path="/signin" component={Signin} />
           <Route path="/avatars" component={Avatars} />
-          <Route path="/quizz" component={Quizz} />
+          <Route path="/quizz/:id" component={Quizz} />
           <Route
             path="/puzzle"
             exact
