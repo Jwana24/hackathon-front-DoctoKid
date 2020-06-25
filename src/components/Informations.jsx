@@ -15,7 +15,7 @@ const Informations = (props) => {
     useEffect(() => {
         Axios({
             method: "GET",
-            url: `http://localhost:3000/api/deseases?name=${deseaseName}`,
+            url: `http://localhost:8080/api/deseases?name=${deseaseName}`,
             data: deseases,
         })
             .then((res) => res.data)
@@ -106,7 +106,7 @@ const Informations = (props) => {
                                 </h3>
                             </Link>
                         </div>
-                        <GeoLoc/>
+                        <GeoLoc deseases={deseases.name} />
                     </div>
                 </div>
             </div>

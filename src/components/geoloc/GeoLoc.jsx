@@ -6,9 +6,10 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 // import css
 import "../../../node_modules/leaflet/dist/leaflet.css";
 
-const GeoLoc = () => {
-    const [lat, setLat] = useState(51.505);
-    const [long, setLong] = useState(-0.09);
+const GeoLoc = (props) => {
+    console.log(props,"TEST")
+    const [lat, setLat] = useState(44.87031);
+    const [long, setLong] = useState(0.5587);
     const [zoom, setZoom] = useState(13);
 
     const position = {
@@ -17,6 +18,33 @@ const GeoLoc = () => {
         zoom: zoom,
     };
 
+    const specialists = [
+        {
+            id: 1,
+            praticien: "Dino Zore",
+            specialite: "dentiste",
+            ville: "Bordeaux",
+            lat: 44.87031,
+            lng: 0.5587,
+        },
+        {
+            id: 2,
+            praticien: "Gerard Ptore",
+            specialite: "medecin traitant",
+            ville: "Bordeaux",
+            lat: 44.87031,
+            lng: 0.5587,
+        },
+        {
+            id: 3,
+            praticien: "Rex Petit",
+            specialite: "medecin traitant",
+            ville: "Bordeaux",
+            lat: 44.87031,
+            lng: 0.5587,
+        },
+    ];
+
     const myIcon = L.icon({
         iconUrl:
             "https://as2.ftcdn.net/jpg/02/15/63/83/500_F_215638318_SlbQIEYjWNrygcHacXL0qk9bjc13yMiH.jpg",
@@ -24,7 +52,9 @@ const GeoLoc = () => {
         iconAnchor: [12, 40],
         popupAnchor: [0, 40],
     });
+
     useEffect(() => {}, []);
+// recup le nom maladie
     return (
         <Map style={{ height: "100vh" }} center={position} zoom={position.zoom}>
             <TileLayer
