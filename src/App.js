@@ -30,7 +30,11 @@ const  App = props => {
   return transitions.map(({ item, props, key }) => (
     <animated.div key={key} style={props}>
       <Suspense fallback={""}>
+<<<<<<< HEAD
         <Navbar />
+=======
+      <NavbarComponent />
+>>>>>>> ac4b8b5d81f4a8bf2a5ec158def990d1607370a8
         <Switch location={item}>
           <Route exact path="/" component={Signup} />
           <Route exact path="/signin" component={Signin} />

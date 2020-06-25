@@ -87,7 +87,7 @@
 .Explanation {
     margin-top: 50px;
     width: 75%;
-    height: 550px;
+    height: 150px;
     border: none;
     background-color: #FDC563;
     padding: 15px;
@@ -104,4 +104,8 @@
     border-radius: 15px;
     border: none;
     padding: 10px;
+}
+
+.Quizz-button:hover {
+    background-color: grey;
 }
