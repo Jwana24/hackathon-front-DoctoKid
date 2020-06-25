@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import GeoLoc from './geoloc/GeoLoc'
 import { Link } from "react-router-dom";
 
 import "./Informations.css";
@@ -105,6 +106,7 @@ const Informations = (props) => {
                                 </h3>
                             </Link>
                         </div>
+                        <GeoLoc/>
                     </div>
                 </div>
             </div>
