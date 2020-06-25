@@ -1,5 +1,5 @@
 import React from 'react';
-import doctokid from '../img/doctokid-logo.png';
+import doctodino from '../img/doctodino.png';
 import fbk from '../img/Facebook-blc.png'
 import insta from '../img/Intsagram-blc.png'
 import pin from '../img/Pinterest-blc.png'
@@ -13,15 +13,16 @@ const Footer = () => {
             <div class="row">
                 <div class="col-md-6 mx-auto">
                     <div>
-                        <img id="img-footer-xs" src={doctokid} alt="Logo Geeokoss" />
+                        <img id="img-footer-xs" src={doctodino} alt="Logo Geeokoss" />
+                    </div>
+                    <div className="row mb-2">
+                        <img id="img-footer-lg" src={doctodino} alt="Logo Geeokoss" />
+                        <div className="brand-font brand-footer">DoctoDino</div>
                     </div>
                     <div>
                         <ul class="list-unstyled">
                             <li><a href="#!">L'équipe DoctoDino</a></li>
                         </ul>
-                    </div>
-                    <div>
-                        <img id="img-footer-lg" src={doctokid} alt="Logo Geeokoss" />
                     </div>
                 </div>
                 <div class="col-md-6 mx-auto">
@@ -40,7 +41,7 @@ const Footer = () => {
             </div>
         </div>
         <hr />
-        <div class="footer-copyright text-center py-3">
+        <div class="footer-copyright text-center">
             <p>© 2020 | Made with <img src={love} class="love" alt="love" /> by The Wild Anatomy</p>
         </div>
     </footer>

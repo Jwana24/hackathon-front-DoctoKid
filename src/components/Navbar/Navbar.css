@@ -6,3 +6,8 @@
 .Navbar{
     background-color: #FEC85B !important;
 }
+
+.brand-font {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.5rem;
+  }
