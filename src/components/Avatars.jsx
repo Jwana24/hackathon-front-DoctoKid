@@ -16,7 +16,6 @@ const Avatars = () => {
     setShow(false);
   };
 
-  console.log(avatar);
   return (
     <>
       <Modal size="md" show={show} onHide={() => handleClose()} centered>

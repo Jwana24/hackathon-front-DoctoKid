@@ -72,8 +72,7 @@ export default ({ items, setCompleted, img }) => {
   });
   return (
     <Content img={img} height={temp}>
-      {springs.map(({ zIndex, shadow, y, scale }, i) => {console.log('y',y, 'scale', scale)
-      return (
+      {springs.map(({ zIndex, shadow, y, scale }, i) => (
         <animated.div
           {...bind(i)}
           key={i}
@@ -89,7 +88,7 @@ export default ({ items, setCompleted, img }) => {
           }}
 //          children={items[i]}
         />
-    )})}
+      ))}
     </Content>
   );
 };
