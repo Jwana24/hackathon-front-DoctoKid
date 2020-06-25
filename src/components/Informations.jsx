@@ -28,6 +28,9 @@ const Informations = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    // const TEST = ()=> {
+    //   return deseases.map( item => <> <h1>{item.name}</h1> <article>{item.text}</article> <a href={item.video}>youtube</a></>)
+    // }
     Axios({
       method: 'POST',
       url: 'http://localhost:3000/api/send',
