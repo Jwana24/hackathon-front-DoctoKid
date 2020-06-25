@@ -9,7 +9,6 @@ const Quizz = (props) => {
 
     const [answers, setAnswers] = useState('question');
     const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
-    const [avatarImage, setAvatarImage] = useState();
 
    const restart  = () => {
        setQuestionOrExplanation('question')

@@ -1,8 +1,28 @@
-.Navbar-Container{
 
-    display:flex;
-    flex-direction: row;
+.Navbar-container{
+    background-color: #92D8F2 !important;
+    
 }
-.Navbar{
-    background-color: #FEC85B !important;
+
+.Navbar-link {
+
+    color: white !important;
+    margin: 10px !important;
+    font-family: 'Muli' !important;
+}
+
+.Navbar-link :hover {
+
+
+    cursor: pointer;
+    
+}
+
+.Navbar-logo {
+
+    width: 100px;
+    height: 70px;
+    margin-right: 10px;
+    object-fit: contain;
+    margin-left: 10px;
 }
