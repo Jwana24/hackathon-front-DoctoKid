@@ -18,7 +18,8 @@ const data = {
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
-        height: '420px'
+        height: '420px',
+        name: 'La+carie+dentaire'
         
     },
     
@@ -32,6 +33,7 @@ const data = {
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
+        name: 'La+varicelle+enfantine',
     },
 
     'poux': {
@@ -44,6 +46,7 @@ const data = {
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
+        name: 'Les+poux'
 
     },
 
@@ -57,6 +60,7 @@ const data = {
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
+        name: 'La+gastro+entérite'
     },
 
 }
