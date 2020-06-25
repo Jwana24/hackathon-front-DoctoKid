@@ -1,13 +1,24 @@
-import React, { useState } from 'react'
-import './Quizz.css'
-import data from '../Data/Data.js'
+import React, { useState, useEffect } from 'react';
+import './Quizz.css';
+import data from '../Data/Data.js';
+import Axios from 'axios';
 
 
 
 const Quizz = () => {
 
     const [answers, setAnswers] = useState('question');
-    const [questionOrExplanation, setQuestionOrExplanation] = useState('question')
+    const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
+
+    const [dino, setDino]= useState({});
+
+    useEffect(()=> {
+        Axios
+        .get('/api/dinosaurs/:id')
+        .then((response)=> response.data)
+        .then((data)=> setDino(data))
+    
+    })
 
    const restart  = () => {
        setQuestionOrExplanation('question')
@@ -103,7 +114,7 @@ const Quizz = () => {
                         <p>{data[answers].explanation2}</p>
                         <p>{data[answers].explanation3}</p>
                     </div>
-                    <button onClick={restart}>Recommencer le quizz</button>
+                    <button className= "Quizz-button" onClick={restart}>Recommencer le quizz</button>
                 </div>
         }[questionOrExplanation]
             
