@@ -1,38 +1,205 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700&display=swap");
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+h1, h2, h3, button {
+  font-family: 'Nunito';
+  font-weight: 800 !important;
+}
+
+h2 {
+  font-size: 3rem !important;
+}
+
+input {
+  color: #222;
+}
+
+/* SIGNIN */
+
+.signin-body {
+  background: #fff;
+  width: 600px !important;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.signin-logo {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.signin-logo img {
+  width: 300px;
+}
+
+.psignin {
+  color: #70747f;
+}
+
+/* BUTTONS */
+
+.button-signup {
+  text-align: center;
+  color: #fff;
+  padding: 15px 25px;
+  border: none;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #ffc85b;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.button-signup:hover {
+  background-color: #45b3df;
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+.button-avatar {
+  text-align: center;
+  color: #000;
+  padding: 15px 25px;
+  border: none;
+  height: 60px;
+  border-radius: 15px;
+  background-color: #fff;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.button-avatar:hover {
+  -webkit-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  transform: rotate(5deg);
+}
+
+/* CARDS */
+
+.avatars-body {
+  background: #fff;
+  margin: auto;
+  padding: 30px;
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.card-group {
+  display: flex;
+}
+
+.card-body {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  border: 5px solid #fff;
+  border-radius: 30px;
+  -webkit-transition-duration: .5s;
+  -moz-transition-duration: .5s;
+  -o-transition-duration: .5s;
+  transition-duration: .5s;
+}
+
+.card-body:hover {
+  transform: scale(1.05);
+}
+
+.card-img {
+  height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card1 {
+  background: #3F88DB;
+}
+
+.card2 {
+  background: #EA9BB7;
+}
+
+.card3 {
+  background: #57B3DF;
+}
+
+.card4 {
+  background: #ffc85b;
+}
+
+.card-body img {
+  width: 80%;
+}
+
+.card-footer {
+  border: none;
+}
+
+.card {
+  border: none !important;
+  margin: 5px;
+  border-radius: 30px;
+}
+
+/* MODALS */
+
+.btn-outline-danger {
+  color: #57B3DF !important;
+  border-color: #57B3DF !important;
+}
+
+.btn-outline-danger:hover {
+  color: #fff !important;
+  background-color: #57B3DF !important;
+  transform: scale(1.2) !important;
+}
+
+.btn-outline-secondary:hover {
+  color: #6c757d !important;
+  background-color: #E5E5E5 !important;
+}
+
+.modal-body {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.modal-footer {
+  justify-content: center !important;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media screen and (max-width: 768px) {
+  .card-body img {
+    width: 40%;
   }
 }
