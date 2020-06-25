@@ -1,11 +1,12 @@
 import React from 'react';
 import { Navbar, Button, Nav,  } from 'react-bootstrap';
+import './Navbar.css';
 
 const NavbarComponent = () => {
     return (
         
         <div>
-            <Navbar bg="light" expand="lg">
+            <Navbar bg="light" expand="lg" className="Navbar">
                 <div>
                 <Navbar.Brand href="#home">Dinhospital</Navbar.Brand>
                 </div>
@@ -14,7 +15,7 @@ const NavbarComponent = () => {
                     <Nav className="mr-auto">
                         <Nav.Link href="#link">Dino-Quizz</Nav.Link>
                         <Nav.Link href="#link">Dino-puzzle</Nav.Link>
-                        <Nav.Link href="#link">A propos</Nav.Link>
+                        <Nav.Link href="#link">L'équipe de DoctoDino</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
                 </Navbar>
