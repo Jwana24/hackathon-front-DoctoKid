@@ -2,9 +2,11 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin-top: 150px;
+    margin-top: 30px;
     width: 90%;
-    margin:0 auto;  
+    margin:0 auto;
+    height: 80vh;
+    align-items: center;
 }
 
 .AllPortrait {
@@ -12,7 +14,8 @@
     
 }
 
-h2 {
+.PortraitContainer h2 {
     text-align: center;
     margin-bottom: 50px;
+    margin-top: -250px;
 }

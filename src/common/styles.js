@@ -3,8 +3,8 @@ import styled, { keyframes } from "styled-components";
 export const Game = styled.div`
   justify-content: center;
   height: 100%;
-  min-height: 100vh;
   width: 100%;
+  padding-top:30px;
   background-image: ${({ filter}) => {
       return filter
         ? " linear-gradient(to bottom, rgba(0,0,0,.3), rgba(0,0,0,.5)), "
@@ -13,6 +13,7 @@ export const Game = styled.div`
     url(${({ bg }) => bg});
   background-size: cover;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
 `;

@@ -119,8 +119,6 @@ export const WinContainer = styled.div`
   }
 `;
 
-
-
 export const Content = styled.div`
   grid-area: content;
   position: relative;

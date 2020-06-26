@@ -10,7 +10,6 @@ const Quizz = (props) => {
 
     const [answers, setAnswers] = useState('question');
     const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
-    const [avatarImage, setAvatarImage] = useState();
 
    const restart  = () => {
        setQuestionOrExplanation('question')
@@ -70,7 +69,7 @@ const Quizz = (props) => {
             question:
             <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>
                 <div className='PortraitContainer'>
-                    <div className='Portrait'>
+                    <div className='PortraitDino'>
                         <img src={require(`../../img/dino${props.match.params.id}.png`)} alt = '' />
                     </div>
                 </div>
@@ -101,7 +100,7 @@ const Quizz = (props) => {
             explanation: 
                 <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>
                     <div className='PortraitContainer'>
-                        <div className='Portrait'>
+                        <div className='PortraitDino'>
                             <img src={require(`../../img/dino${props.match.params.id}.png`)} alt = '' />
                         </div>
                     </div>

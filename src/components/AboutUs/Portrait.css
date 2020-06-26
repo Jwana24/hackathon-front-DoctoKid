@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700&display=swap%22");
 
-img {
+.Portrait img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -8,9 +8,10 @@ img {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+    object-fit: cover;
 }
 
-h4 {
+.Portrait h4 {
     text-align: center;
 }
 
@@ -21,7 +22,7 @@ h4 {
     padding:15px;
 }
 
-p {
+.Portrait p {
     font-family: 'Muli';
 }
 
