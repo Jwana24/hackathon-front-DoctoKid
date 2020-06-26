@@ -1,19 +1,35 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
 
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+html {
+  height: 100%;
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: 0;
+  padding: 0;
+  padding-right: 0px !important;
   font-family: 'Muli', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+}
+
+footer {
+  flex-shrink: 0;
 }
 
 code {
@@ -34,6 +50,17 @@ input {
   color: #222;
 }
 
+.brand-font {
+  font-family: 'Permanent Marker', cursive;
+}
+
+.brand-footer {
+  padding-left: 10px;
+  font-size: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
 /* SIGNIN */
 
 .signin-body {
@@ -41,10 +68,8 @@ input {
   width: 600px !important;
   margin: auto;
   padding: 30px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: 50px 0px 0px 0px;
 }
 
 .signin-logo {
@@ -53,7 +78,7 @@ input {
 }
 
 .signin-logo img {
-  width: 300px;
+  width: 80px;
 }
 
 .psignin {
@@ -83,6 +108,10 @@ input {
   transform: rotate(5deg);
 }
 
+.button-signup:focus {
+  outline: none;
+}
+
 .button-avatar {
   text-align: center;
   color: #000;
@@ -109,10 +138,8 @@ input {
   background: #fff;
   margin: auto;
   padding: 30px;
-  position: absolute;
-  top: 100px;
-  left: 50%;
-  transform: translateX(-50%);
+  position: relative;
+  margin: 70px 0px;
 }
 
 .card-group {
@@ -201,5 +228,74 @@ input {
 @media screen and (max-width: 768px) {
   .card-body img {
     width: 40%;
+  }
+}
+
+/* FOOTER */
+
+footer p {
+  margin: 0px;
+}
+
+.page-footer {
+  background-color: #EFB7CC;
+  color: #fff;
+  width:100%;
+  padding-top:50px;
+}
+
+.page-footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.page-footer img {
+  width: 150px;
+}
+
+.footer-copyright {
+  margin-top: 10px;
+}
+
+#img-footer-xs {
+  display: none;
+}
+
+#img-footer-lg {
+  width: 50px;
+  margin-left: 15px;
+}
+
+.love {
+  width: 15px !important;
+  padding-bottom: 5px;
+}
+
+.social {
+  width: 30px !important;
+  margin: 0px 15px;
+}
+
+.social:hover {
+  transform: scale(1.2);
+}
+
+.list-unstyled a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 0px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .brand-footer-sm {
+    justify-content: center;
+    padding-bottom: 10px;
+  }
+  .social-media {
+    justify-content: center;
   }
 }

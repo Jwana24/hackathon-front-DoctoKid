@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { disablePageScroll, enablePageScroll } from "scroll-lock";
+import { Link } from 'react-router-dom';
 
 import { Game } from "../../common/styles";
 import { GameContainer, WinContainer } from "./styles";
@@ -52,8 +53,18 @@ export default () => {
     }
   };
 
+  const goBack = () => {
+    window.history.back();
+  }
+
   return (
-    <Game bg={images["bg.png"]} size="400px" filter="1" style={{paddingRight: '10%'}}>
+    <Game bg={images["bg.png"]} size="400px" filter="1">
+
+      <button
+        className="button-signup mb-3"
+        onClick={goBack}
+      >retour</button>
+
       <GameContainer>
           <div className="options" onClick={select}>
             <img src={images["1.png"]} alt="puzzle1" />

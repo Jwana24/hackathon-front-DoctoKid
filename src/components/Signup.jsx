@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Row, Col } from 'react-bootstrap';
-import doctokid from '../img/doctokid-logo.png';
+import doctodino from '../img/doctodino.png';
 import '../App.css';
 
 const Signin = () => {
@@ -23,7 +23,7 @@ const Signin = () => {
   return (
     <section className="signin-body container">
       <div className="signin-logo">
-        <img src={doctokid} alt="DoctoKid" />
+        <img src={doctodino} alt="DoctoKid" />
       </div>
       <Form className="Form-container">
         <h2 className="mb-4 text-center">Mon profil</h2>
