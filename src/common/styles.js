@@ -11,7 +11,7 @@ export const Game = styled.div`
         : "";
     }}
     url(${({ bg }) => bg});
-  background-size: ${({ size }) => size};
+  background-size: cover;
   display: flex;
   justify-content: space-between;
   align-items: center;

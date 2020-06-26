@@ -21,7 +21,6 @@ const Avatars = () => {
     localStorage.setItem('avatar_id', avatar)
   }
 
-  console.log(avatar);
   return (
     <>
       <Modal size="md" show={show} onHide={() => handleClose()} centered>
