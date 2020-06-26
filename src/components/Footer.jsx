@@ -16,7 +16,6 @@ const Footer = () => {
                         <img id="img-footer-xs" src={doctodino} alt="Logo DoctoDino" />
                     </div>
                     <div className="row mb-2 brand-footer-sm">
-                        <img id="img-footer-lg" src={doctodino} alt="Logo DoctoDino" />
                         <div className="brand-font brand-footer">DoctoDino</div>
                     </div>
                     <div>
