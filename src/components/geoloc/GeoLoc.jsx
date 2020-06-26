@@ -2,14 +2,34 @@
 import React, { useState, useEffect } from "react";
 import L from "leaflet";
 import { Map, TileLayer, Marker, Popup } from "react-leaflet";
+import IconDentiste from '../../img/tooth.png';
+import IconDocteur from '../../img/stethoscope.png';
 
 // import css
 import "../../../node_modules/leaflet/dist/leaflet.css";
 
 const GeoLoc = ({ deseases }) => {
-    const [lat, setLat] = useState(44.87031);
-    const [long, setLong] = useState(0.5587);
+    const [lat, setLat] = useState(44.844117);
+    const [long, setLong] = useState(-0.621556);
     const [zoom, setZoom] = useState(13);
+
+    const [latGeneralist, setLatGeneralist] = useState(44.85031);
+    const [longGeneralist, setLongGeneralist] = useState(0.5087);
+
+    // icon initialization
+    const generalistIcon = L.icon({
+        iconUrl: IconDocteur,
+        iconSize: [45, 45],
+        iconAnchor: [22, 94],
+        popupAnchor: [-3, -76],
+    });
+
+    const dentistIcon = L.icon({
+        iconUrl: IconDentiste,
+        iconSize: [40, 40],
+        iconAnchor: [12, 40],
+        popupAnchor: [0, 40],
+    });
 
     const position = {
         lat: lat,
@@ -17,14 +37,28 @@ const GeoLoc = ({ deseases }) => {
         zoom: zoom,
     };
 
+    const positionGeneralist0 = {
+        lat:44.844117,
+        lng:-0.621556
+    }
+    const positionGeneralist1 = {
+        lat:44.848507,
+        lng:-0.496622
+    }
+    const positionGeneralist2 = {
+        lat:44.856792,
+        lng:-0.567602
+    };
+
     const specialists = [
         {
             id: 1,
-            praticien: "Dino Zore",
+            praticien: "Gerard Menvusa",
             specialite: "dentiste",
             ville: "Bordeaux",
             lat: 44.87031,
             lng: 0.5587,
+            icon: dentistIcon,
         },
         {
             id: 2,
@@ -33,6 +67,7 @@ const GeoLoc = ({ deseases }) => {
             ville: "Bordeaux",
             lat: 44.50000,
             lng: 0.5000,
+            icon: generalistIcon
         },
         {
             id: 3,
@@ -41,6 +76,16 @@ const GeoLoc = ({ deseases }) => {
             ville: "Bordeaux",
             lat: 44.80031,
             lng: 0.5507,
+            icon: generalistIcon
+        },
+        {
+            id: 3,
+            praticien: "Dino Zore",
+            specialite: "medecin traitant",
+            ville: "Bordeaux",
+            lat: 44.80031,
+            lng: 0.5507,
+            icon: generalistIcon
         },
     ];
 
@@ -49,28 +94,17 @@ const GeoLoc = ({ deseases }) => {
             return specialist.specialite === "medecin traitant" && {lat:specialist.lat, lng:specialist.lng};
         }
         else if(deseases[0] && deseases[0].name == 'La carie dentaire'){
-            return specialist.specialite === "dentiste" && [specialist.lat, specialist.lng];
+            return specialist.specialite === "dentiste" && {lat:specialist.lat, lng:specialist.lng};
         }
         else if(deseases[0] && deseases[0].name == 'La gastro entérite'){
-            return specialist.specialite === "medecin traitant" && [specialist.lat, specialist.lng];
+            return specialist.specialite === "medecin traitant" && {lat:specialist.lat, lng:specialist.lng};
         }
         else if(deseases[0] && deseases[0].name == 'Les poux'){
-            return specialist.specialite === "medecin traitant" && [specialist.lat, specialist.lng];
+            return specialist.specialite === "medecin traitant" && {lat:specialist.lat, lng:specialist.lng};
         }
         else{
             return null;
         }
-    });
-
-    console.log(searchSpe[1]); // {lat:44.5, lng:0.5} 
-    console.log(searchSpe[2]);
-
-    const myIcon = L.icon({
-        iconUrl:
-            "https://as2.ftcdn.net/jpg/02/15/63/83/500_F_215638318_SlbQIEYjWNrygcHacXL0qk9bjc13yMiH.jpg",
-        iconSize: [128, 128],
-        iconAnchor: [12, 40],
-        popupAnchor: [0, 40],
     });
 
     return (
@@ -79,7 +113,17 @@ const GeoLoc = ({ deseases }) => {
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             />
-            <Marker position={position} icon={myIcon}>
+            <Marker position={positionGeneralist0} icon={generalistIcon}>
+                <Popup>
+                    Dr Gerard Ptore. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            <Marker position={positionGeneralist1} icon={generalistIcon}>
+                <Popup>
+                    Rex Petit. <br /> Easily customizable.
+                </Popup>
+            </Marker>
+            <Marker position={positionGeneralist2} icon={generalistIcon}>
                 <Popup>
                     A pretty CSS3 popup. <br /> Easily customizable.
                 </Popup>
