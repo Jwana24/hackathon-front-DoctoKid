@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Quizz.css';
 import data from '../Data/Data.js';
 import Axios from 'axios';
@@ -10,23 +11,6 @@ const Quizz = (props) => {
     const [answers, setAnswers] = useState('question');
     const [questionOrExplanation, setQuestionOrExplanation] = useState('question');
     const [avatarImage, setAvatarImage] = useState();
-
-    // const [dino, setDino]= useState({});
-
-    // useEffect(()=> {
-    //     const avatar_id = props.match.params.id
-    //     console.log(props.match.params.id)
-    //     Axios.get(`http://localhost:8080/api/dinosaurs/${avatar_id}`)
-    //     .then(res=> setAvatarImage(res.data.image))
-    // }, [])
-
-    // useEffect(()=> {
-    //     Axios
-    //     .get('/api/dinosaurs/:id')
-    //     .then((response)=> response.data)
-    //     .then((data)=> setDino(data))
-    
-    // })
 
    const restart  = () => {
        setQuestionOrExplanation('question')
@@ -80,6 +64,7 @@ const Quizz = (props) => {
             default: console.log('Something bad happened');
         }
     }
+    console.log(props.match)
     return (
         {
             question:
@@ -90,38 +75,41 @@ const Quizz = (props) => {
                     </div>
                 </div>
                     <div className='Question'>
-                        {data[answers].question}
-                    </div>
-                    <div className='AnswersContainer'>
-                    <div className='AnswerBlock'>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice1}
+                            {data[answers].question}
                         </div>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                        {data[answers].choice2}
+                        <div className='AnswersContainer'>
+                        <div className='AnswerBlock'>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice1}
+                            </div>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                            {data[answers].choice2}
+                            </div>
+                        </div>
+                        <div className='AnswerBlock'>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice3}
+                            </div>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice4}
+                            </div>
                         </div>
                     </div>
-                    <div className='AnswerBlock'>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice3}
-                        </div>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice4}
-                        </div>
-                    </div>
-                    </div>
-            </div>,
+                </div>,
+                    
 
             explanation: 
                 <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>
                     <div className='PortraitContainer'>
                         <div className='Portrait'>
+                            <img src={require(`../../img/dino${props.match.params.id}.png`)} alt = '' />
                         </div>
                     </div>
-                    <div className='Explanation' style={{height: data[answers].height}}>
+                    <div className='Explanation'>
                         <p>{data[answers].explanation1}</p>
                         <p>{data[answers].explanation2}</p>
                         <p>{data[answers].explanation3}</p>
+                        <Link to={`/informations/${data[answers].name}`}>Plus d'informations ici !</Link>
                     </div>
                     <button className= "Quizz-button" onClick={restart}>Recommencer le quizz</button>
                 </div>

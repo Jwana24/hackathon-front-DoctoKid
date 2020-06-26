@@ -10,6 +10,8 @@ import Informations from './components/Informations';
 import { ImagesProvider } from "./components/contexts/ImageContext";
 import { useTransition, animated } from "react-spring";
 import useRouter from "./hooks/useRouter";
+import NavbarComponent from './components/Navbar/Navbar';
+
 
 const Puzzle = React.lazy(() => {
   return import("./components/Puzzle/Puzzle");
@@ -28,11 +30,14 @@ const  App = props => {
   return transitions.map(({ item, props, key }) => (
     <animated.div key={key} style={props}>
       <Suspense fallback={""}>
+
+      <NavbarComponent />
         <Switch location={item}>
           <Route exact path="/" component={Signup} />
           <Route exact path="/signin" component={Signin} />
           <Route path="/avatars" component={Avatars} />
           <Route path="/quizz/:id" component={Quizz} />
+          <Route path="/informations/:name" component={Informations} />
           <Route
             path="/puzzle"
             exact
@@ -48,7 +53,6 @@ const  App = props => {
               </ImagesProvider>
             )}
           />
-          <Route path="/informations" component={Informations} />
         </Switch>
       </Suspense>
     </animated.div>

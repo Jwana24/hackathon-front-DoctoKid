@@ -1,15 +1,14 @@
 .Portrait {
-    
     border: 1px solid black;
     width: 25%;
     height: 240px;
-    border-radius: 10px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 10px;
-    -ms-border-radius: 10px;
-    -o-border-radius: 10px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
     background-color: white;
-    
+    border: none;
 }
 .PortraitContainer{
     width: 100%;
@@ -25,12 +24,16 @@
     -o-border-radius: 10px;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    border: 1px solid #dfe6e9;
     margin-left: 25%;;
     align-items: center;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 5px 5px 5px grey;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    opacity: 0.8;
 }
 
 .Question {
@@ -87,7 +90,7 @@
 .Explanation {
     margin-top: 50px;
     width: 75%;
-    height: 550px;
+    height: 200px;
     border: none;
     background-color: #FDC563;
     padding: 15px;
@@ -104,4 +107,50 @@
     border-radius: 15px;
     border: none;
     padding: 10px;
+}
+
+.Quizz-button:hover {
+    background-color: grey;
+}
+
+@media screen and (max-width: 834px){
+    
+    .QuizzContainer{
+        width: 96%;
+        height: initial;
+        margin-left: 2%;
+    }
+
+    .Portrait{
+        height: 73px;
+        width: 10%;
+    }
+
+    .Portrait img{
+        width: 70px;
+    }
+
+    .Question{
+        height: 70px;
+        width: 250px;
+    }
+
+    .Answer{
+        height: 50px;
+        width: 200px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (max-width: 767px){
+
+    .Portrait{
+        height: 73px;
+        width: 20%;
+    }
+
+    .AnswerBlock{
+        flex-direction: column;
+        margin-top: 0;
+    }
 }
