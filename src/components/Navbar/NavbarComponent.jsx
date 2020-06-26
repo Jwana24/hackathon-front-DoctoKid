@@ -31,11 +31,10 @@ const timerProps = {
   const days = Math.ceil(remainingTime / daySeconds);
   const daysDuration = days * daySeconds;
 
-
-
 const NavbarComponent = () => {
     return (    
         <Navbar bg="light" expand="lg" className="Navbar-container">
+            <div className="container">
             <Navbar.Brand href="/home"></Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <img src={logo} alt="logo" className="Navbar-logo"/>
@@ -82,6 +81,8 @@ const NavbarComponent = () => {
                     </div>
                 </Nav>    
             </Navbar.Collapse>
+            </div>
+            
         </Navbar>
         
     )
