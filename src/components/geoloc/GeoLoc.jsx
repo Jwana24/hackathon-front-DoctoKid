@@ -38,16 +38,16 @@ const GeoLoc = ({ deseases }) => {
     };
 
     const positionGeneralist0 = {
-        lat:44.844117,
-        lng:-0.621556
+        lat:44.830479,
+        lng:-0.570828
     }
     const positionGeneralist1 = {
-        lat:44.848507,
-        lng:-0.496622
+        lat:44.821345,
+        lng:-0.570162
     }
     const positionGeneralist2 = {
-        lat:44.856792,
-        lng:-0.567602
+        lat:44.846969,
+        lng:-0.549233
     };
 
     const specialists = [
@@ -115,17 +115,17 @@ const GeoLoc = ({ deseases }) => {
             />
             <Marker position={positionGeneralist0} icon={generalistIcon}>
                 <Popup>
-                    Dr Gerard Ptore. <br /> Easily customizable.
+                    Dr. Gerard Ptore, <br /> Médecin traitant <br /> 23 cours de la Marne 33000 BORDEAUX
                 </Popup>
             </Marker>
             <Marker position={positionGeneralist1} icon={generalistIcon}>
                 <Popup>
-                    Rex Petit. <br /> Easily customizable.
+                    Dr. Rex Petit, <br /> Médecin traitant <br /> 4 rue Mellis 33800 BORDEAUX
                 </Popup>
             </Marker>
             <Marker position={positionGeneralist2} icon={generalistIcon}>
                 <Popup>
-                    A pretty CSS3 popup. <br /> Easily customizable.
+                    Dr. Dino Zore, <br /> Médecin traitant <br /> Avenue Thiers 33000 BORDEAUX
                 </Popup>
             </Marker>
         </Map>

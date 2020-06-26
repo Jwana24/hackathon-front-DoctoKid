@@ -1,7 +1,7 @@
 import React  from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import { CountdownCircleTimer } from 'react-countdown-circle-timer';
-import logo from"../../img/logo.png";
+import logo from"../../img/doctodino.png";
 import './Navbar.css';
 
 
