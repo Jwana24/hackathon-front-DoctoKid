@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './Informations.css';
 
@@ -7,13 +8,13 @@ const Informations = (props) => {
   const [ deseases, setDeseases ] = useState([]);
   const [ mail, setMail ] = useState({});
 
-  const deseaseName = props.match.params.name
+  const deseaseName = props.match.params.name;
 
   // get deseases by name in the database
   useEffect(() => {
     Axios({
       method: 'GET',
-      url: `http://localhost:8080/api/deseases?name=${deseaseName}`,
+      url: `http://localhost:3000/api/deseases?name=${deseaseName}`,
       data: deseases
     })
     .then(res => res.data)
@@ -30,9 +31,6 @@ const Informations = (props) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // const TEST = ()=> {
-    //   return deseases.map( item => <> <h1>{item.name}</h1> <article>{item.text}</article> <a href={item.video}>youtube</a></>)
-    // }
     Axios({
       method: 'POST',
       url: 'http://localhost:3000/api/send',
@@ -73,9 +71,14 @@ const Informations = (props) => {
           <div>
             <h2 className="InfoMail">Je voudrais recevoir ce contenu par mail :</h2>
             <form className="ContainerForm" onSubmit={handleSubmit}>
-              <input className="FormEmailElement" name="email" value={mail.email} onChange={handleChange} />
+              <input className="FormEmailElement" name="email" value={mail.email} onChange={handleChange} placeholder="example@example.fr" />
               <input className="FormSubmitElement" name="submit" value="Recevoir" type="submit" />
             </form>
+          </div>
+          <div>
+            <div>
+              <Link to="/puzzle"><h3 className="InfoPuzzle">Maintenant il est temps de s'amuser !</h3></Link>
+            </div>
           </div>
         </div>
       </div>
