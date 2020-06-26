@@ -1,4 +1,4 @@
-.Portrait {
+.PortraitDino {
     border: 1px solid black;
     width: 25%;
     height: 240px;
@@ -121,12 +121,12 @@
         margin-left: 2%;
     }
 
-    .Portrait{
+    .PortraitDino{
         height: 73px;
         width: 10%;
     }
 
-    .Portrait img{
+    .PortraitDino img{
         width: 70px;
     }
 
@@ -144,7 +144,7 @@
 
 @media screen and (max-width: 767px){
 
-    .Portrait{
+    .PortraitDino{
         height: 73px;
         width: 20%;
     }

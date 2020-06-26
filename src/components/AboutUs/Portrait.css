@@ -11,7 +11,7 @@
     object-fit: cover;
 }
 
-h4 {
+.Portrait h4 {
     text-align: center;
 }
 
@@ -22,7 +22,7 @@ h4 {
     padding:15px;
 }
 
-p {
+.Portrait p {
     font-family: 'Muli';
 }
 
