@@ -108,6 +108,10 @@ input {
   transform: rotate(5deg);
 }
 
+.button-signup:focus {
+  outline: none;
+}
+
 .button-avatar {
   text-align: center;
   color: #000;
