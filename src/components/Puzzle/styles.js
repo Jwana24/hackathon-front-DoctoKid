@@ -80,6 +80,7 @@ export const WinContainer = styled.div`
   position: relative;
   z-index: 0;
   border-radius: 10px;
+  overflow: hidden;
   padding: 1rem;
   background: lightblue;
   > img {
