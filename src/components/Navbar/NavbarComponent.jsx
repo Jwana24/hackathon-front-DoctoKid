@@ -45,7 +45,7 @@ const NavbarComponent = () => {
                     <Nav.Link href="/signin" className="Navbar-link">Accueil</Nav.Link>
                     <Nav.Link href="/quizz" className="Navbar-link">Le dino-quizz</Nav.Link>
                     <Nav.Link href="/puzzle" className="Navbar-link">Les dino-jeux</Nav.Link>
-                    <Nav.Link href="/team" className="Navbar-link">l'équipe de DoctoDino</Nav.Link>
+                    <Nav.Link href="/AboutUs" className="Navbar-link">l'équipe de DoctoDino</Nav.Link>
                     <div className="big-timer-container">
                     <div className="timer-container">
 

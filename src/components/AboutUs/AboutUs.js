@@ -7,9 +7,9 @@ const AboutUs = () => {
     const team = [
         {
             name: 'Johanna',
-            description:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+            description:'JS/REACT developper who loves reading, coding, play video games and spending time with my friends',
             portrait:'johanna.png',
-            linkedin:'',
+            linkedin:'https://www.linkedin.com/in/johannadetrieux/',
             facebook:'',
             instagram:'',
         },
@@ -23,15 +23,15 @@ const AboutUs = () => {
         },
         {
             name: 'Gregory',
-            description:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+            description:'Créatif et curieux de nature je m\'épanouis à souhait dans la programmation. Combiner et expérimenter sont mes principales sources de motivations mais chercher à comprendre anime aussi ma soif d\'approfondir.',
             portrait:'greg.jpeg',
-            linkedin:'',
+            linkedin:'https://www.linkedin.com/in/gregory-chamekh/',
             facebook:'',
             instagram:'',
         },
         {
             name: 'Benoit',
-            description:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+            description:'Passioné de nouvelles technologies, je me tiens toujours à jour sur les dernières nouveautés ! Quand je code du html, je balise !',
             portrait:'benoit.jpg',
             linkedin:'',
             facebook:'',
@@ -39,9 +39,9 @@ const AboutUs = () => {
         },
         {
             name: 'Thomas',
-            description:'Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsum',
+            description:'Persévérance, curiosité, esprit d\'équipe et autonomie, sont les qualités qui me caractérisent et dont je saurai vous faire profiter.',
             portrait:'thomas.png',
-            linkedin:'',
+            linkedin:'https://www.linkedin.com/in/thomas-lachieze/',
             facebook:'',
             instagram:'',
         }
