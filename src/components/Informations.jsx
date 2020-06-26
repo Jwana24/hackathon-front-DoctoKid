@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import Axios from 'axios';
+import { Link } from 'react-router-dom';
 
 import './Informations.css';
 
@@ -70,9 +71,14 @@ const Informations = (props) => {
           <div>
             <h2 className="InfoMail">Je voudrais recevoir ce contenu par mail :</h2>
             <form className="ContainerForm" onSubmit={handleSubmit}>
-              <input className="FormEmailElement" name="email" value={mail.email} onChange={handleChange} />
+              <input className="FormEmailElement" name="email" value={mail.email} onChange={handleChange} placeholder="example@example.fr" />
               <input className="FormSubmitElement" name="submit" value="Recevoir" type="submit" />
             </form>
+          </div>
+          <div>
+            <div>
+              <Link to="/puzzle"><h3 className="InfoPuzzle">Maintenant il est temps de s'amuser !</h3></Link>
+            </div>
           </div>
         </div>
       </div>

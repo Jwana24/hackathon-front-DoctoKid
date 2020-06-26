@@ -6,7 +6,7 @@ import Dino3 from '../img/dino3.png';
 import Dino4 from '../img/dino4.png';
 import '../App.css';
 import { Button, Modal } from 'react-bootstrap';
-import { CountdownCircleTimer } from 'react-countdown-circle-timer'
+import { CountdownCircleTimer } from 'react-countdown-circle-timer';
 
 const Avatars = () => {
 
@@ -21,7 +21,6 @@ const Avatars = () => {
     localStorage.setItem('avatar_id', avatar)
   }
 
-  console.log(avatar);
   return (
     <>
       <Modal size="md" show={show} onHide={() => handleClose()} centered>
@@ -40,7 +39,7 @@ const Avatars = () => {
         </Modal.Footer>
       </Modal>
       <section className="avatars-body container">
-        <h2 className="mb-4 text-center">Choisi ton Dino !</h2>
+        <h2 className="mb-4 text-center">Choisis ton Dino !</h2>
         <div className="card-group">
           <div className="card-body card1 col-md-3">
             <div className="card-img">
