@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import './Quizz.css';
 import data from '../Data/Data.js';
 import Axios from 'axios';
@@ -62,6 +63,7 @@ const Quizz = (props) => {
             default: console.log('Something bad happened');
         }
     }
+    console.log(props.match)
     return (
         {
             question:
@@ -105,6 +107,7 @@ const Quizz = (props) => {
                         <p>{data[answers].explanation1}</p>
                         <p>{data[answers].explanation2}</p>
                         <p>{data[answers].explanation3}</p>
+                        <Link to={`/informations/${data[answers].name}`}>Plus d'informations ici !</Link>
                     </div>
                     <button className= "Quizz-button" onClick={restart}>Recommencer le quizz</button>
                 </div>

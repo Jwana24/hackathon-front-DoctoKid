@@ -1,14 +1,25 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Muli:wght@300;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap%22");
+
 
 .Navbar-container{
     background-color: #92D8F2 !important;
+    display: flex !important;
+    flex-direction: row !important;
+    justify-content: start !important;
+    height: 100px;
     
 }
 
 .Navbar-link {
 
-    color: white !important;
+    
     margin: 10px !important;
     font-family: 'Muli' !important;
+    text-align: center !important;
+    display: flex;
+    align-items: center;
 }
 
 .Navbar-link :hover {
@@ -24,5 +35,30 @@
     height: 70px;
     margin-right: 10px;
     object-fit: contain;
-    margin-left: 10px;
+    margin-left: -80px;
+    
+   
+}
+.Navbar-title{
+    font-family:'Permanent Marker';
+    padding-right: 40px;
+}
+
+.Timer {
+
+    width: 100px;
+    height: 50px;
+}
+
+
+.big-timer-container  {
+
+display: flex;
+flex-direction: row;
+margin-left: 100px;
+}
+
+.timer-container {
+
+    margin: 10px;
 }

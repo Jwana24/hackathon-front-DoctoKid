@@ -36,6 +36,7 @@ const  App = props => {
           <Route exact path="/signin" component={Signin} />
           <Route path="/avatars" component={Avatars} />
           <Route path="/quizz/:id" component={Quizz} />
+          <Route path="/informations/:name" component={Informations} />
           <Route
             path="/puzzle"
             exact
@@ -51,7 +52,6 @@ const  App = props => {
               </ImagesProvider>
             )}
           />
-          <Route path="/informations" component={Informations} />
         </Switch>
       </Suspense>
     </animated.div>

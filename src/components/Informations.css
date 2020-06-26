@@ -96,7 +96,8 @@
 }
 
 .Info .FormEmailElement{
-  padding: 5px 15px ;
+  width: 30%;
+  padding: 10px 20px ;
   margin-right: 20px;
   border: 1px solid #b2bec3;
   border-radius: 10px;
@@ -107,7 +108,8 @@
 }
 
 .Info .FormSubmitElement{
-  padding: 5px 15px;
+  padding: 15px 25px;
+  font-weight: 700;
   background-color: #87D3F1;
   cursor: pointer;
   border: none;
@@ -116,18 +118,14 @@
   -moz-border-radius: 30px;
   -ms-border-radius: 30px;
   -o-border-radius: 30px;
-  transition: 0.15s;
-  -webkit-transition: 0.15s;
-  -moz-transition: 0.15s;
-  -ms-transition: 0.15s;
-  -o-transition: 0.15s;
+  transition-duration: .5s;
 }
 
 .Info .FormSubmitElement:hover{
   background-color: #ffc85c;
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
+  transform: rotate(5deg);
+  -webkit-transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  -ms-transform: rotate(5deg);
+  -o-transform: rotate(5deg);
 }
