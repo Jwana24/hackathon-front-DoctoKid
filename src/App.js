@@ -12,6 +12,7 @@ import { ImagesProvider } from "./components/contexts/ImageContext";
 import { useTransition, animated } from "react-spring";
 import useRouter from "./hooks/useRouter";
 import NavbarComponent from './components/Navbar/NavbarComponent';
+import AboutUs from './components/AboutUs/AboutUs';
 
 const Puzzle = React.lazy(() => {
   return import("./components/Puzzle/Puzzle");
@@ -38,6 +39,7 @@ const  App = props => {
           <Route path="/avatars" component={Avatars} />
           <Route path="/quizz/:id" component={Quizz} />
           <Route path="/informations/:name" component={Informations} />
+          <Route path="/AboutUs" component={AboutUs} />
           <Route
             path="/puzzle"
             exact
