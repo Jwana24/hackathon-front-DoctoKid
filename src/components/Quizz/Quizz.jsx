@@ -75,27 +75,28 @@ const Quizz = (props) => {
                     </div>
                 </div>
                     <div className='Question'>
-                        {data[answers].question}
-                    </div>
-                    <div className='AnswersContainer'>
-                    <div className='AnswerBlock'>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice1}
+                            {data[answers].question}
                         </div>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                        {data[answers].choice2}
+                        <div className='AnswersContainer'>
+                        <div className='AnswerBlock'>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice1}
+                            </div>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                            {data[answers].choice2}
+                            </div>
+                        </div>
+                        <div className='AnswerBlock'>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice3}
+                            </div>
+                            <div className='Answer' onClick={(event) => chooseHandler(event)}>
+                                {data[answers].choice4}
+                            </div>
                         </div>
                     </div>
-                    <div className='AnswerBlock'>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice3}
-                        </div>
-                        <div className='Answer' onClick={(event) => chooseHandler(event)}>
-                            {data[answers].choice4}
-                        </div>
-                    </div>
-                    </div>
-            </div>,
+                </div>,
+                    
 
             explanation: 
                 <div className='QuizzContainer' style={{backgroundImage: `url(${data[answers].image})`}}>

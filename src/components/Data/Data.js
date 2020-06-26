@@ -33,7 +33,7 @@ const data = {
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
-        name: 'La+varicelle+enfantine',
+        name: 'La+varicelle+infantile',
     },
 
     'poux': {
@@ -56,7 +56,7 @@ const data = {
         choice2: 'a les crottes de couleur clair',
         choice3: 'a les crottes plutôt liquide',
         choice4: 'ne peut se retenir d\allez aux toilettes',
-        image: '',
+        image: 'https://image.freepik.com/vecteurs-libre/fille-se-nettoyant-mains_1308-43018.jpg',
         explanation1: "Bravo!",
         explanation2:"Tu as été courageux, tu as répondu à toutes les questions.",
         explanation3:"Maintenant, clique sur ce lien pour voir le resultat!",
