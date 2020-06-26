@@ -6,8 +6,7 @@ import { Map, TileLayer, Marker, Popup } from "react-leaflet";
 // import css
 import "../../../node_modules/leaflet/dist/leaflet.css";
 
-const GeoLoc = (props) => {
-    console.log(props,"TEST")
+const GeoLoc = ({ deseases }) => {
     const [lat, setLat] = useState(44.87031);
     const [long, setLong] = useState(0.5587);
     const [zoom, setZoom] = useState(13);
@@ -32,18 +31,39 @@ const GeoLoc = (props) => {
             praticien: "Gerard Ptore",
             specialite: "medecin traitant",
             ville: "Bordeaux",
-            lat: 44.87031,
-            lng: 0.5587,
+            lat: 44.50000,
+            lng: 0.5000,
         },
         {
             id: 3,
             praticien: "Rex Petit",
             specialite: "medecin traitant",
             ville: "Bordeaux",
-            lat: 44.87031,
-            lng: 0.5587,
+            lat: 44.80031,
+            lng: 0.5507,
         },
     ];
+
+    const searchSpe = specialists.map((specialist, index) => {
+        if(deseases[0] && deseases[0].name === 'La varicelle infantile'){
+            return specialist.specialite === "medecin traitant" && {lat:specialist.lat, lng:specialist.lng};
+        }
+        else if(deseases[0] && deseases[0].name == 'La carie dentaire'){
+            return specialist.specialite === "dentiste" && [specialist.lat, specialist.lng];
+        }
+        else if(deseases[0] && deseases[0].name == 'La gastro entérite'){
+            return specialist.specialite === "medecin traitant" && [specialist.lat, specialist.lng];
+        }
+        else if(deseases[0] && deseases[0].name == 'Les poux'){
+            return specialist.specialite === "medecin traitant" && [specialist.lat, specialist.lng];
+        }
+        else{
+            return null;
+        }
+    });
+
+    console.log(searchSpe[1]); // {lat:44.5, lng:0.5} 
+    console.log(searchSpe[2]);
 
     const myIcon = L.icon({
         iconUrl:
@@ -53,10 +73,8 @@ const GeoLoc = (props) => {
         popupAnchor: [0, 40],
     });
 
-    useEffect(() => {}, []);
-// recup le nom maladie
     return (
-        <Map style={{ height: "100vh" }} center={position} zoom={position.zoom}>
+        <Map style={{ height: "50vh" }} center={position} zoom={position.zoom}>
             <TileLayer
                 attribution='&amp;copy <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
                 url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
