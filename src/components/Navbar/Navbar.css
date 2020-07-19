@@ -9,7 +9,7 @@
     flex-direction: row !important;
     justify-content: start !important;
     height: 100px;
-    
+    z-index: 999999999!important;
 }
 
 .Navbar-link {

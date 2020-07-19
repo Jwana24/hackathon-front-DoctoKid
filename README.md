@@ -1,5 +1,10 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# Hackathon DoctoDino
+Hackathon n°2 with Doctolib, Dataiku and Wild Code School partners.
+
+<img width="1440" alt="Capture d’écran 2020-06-27 à 20 33 59" src="https://user-images.githubusercontent.com/38757545/85929479-9664c800-b8b5-11ea-9566-0872aff99300.png">
+
 ## Available Scripts
 
 In the project directory, you can run:

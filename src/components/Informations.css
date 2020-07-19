@@ -51,7 +51,7 @@
 }
 
 .Info .InfoPuzzle{
-  margin-top: 60px;
+  margin-top: 40px;
   text-decoration: underline;
   transition-duration: .2s;
 }
@@ -254,6 +254,12 @@
   -moz-transform: rotate(5deg);
   -ms-transform: rotate(5deg);
   -o-transform: rotate(5deg);
+}
+
+.ContainerLogoDino img{
+  width: 85px;
+  height: auto;
+  margin-top: 30px;
 }
 
 @media screen and (max-width: 834px){
